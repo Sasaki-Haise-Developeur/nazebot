@@ -31,7 +31,11 @@ bot.on('message', message => {
         
     }
 
-    var msgauthor =  message.author.id;
+    if (message.content === "Salut"){
+         message.reply("Bien le bonjour. :)");
+         console.log("Commande Salut effectuer");
+        
+    }
 
     if(message.author.bot)return;
 
@@ -57,9 +61,7 @@ bot.on('message', message => {
             .setFooter("Enjoy :p")
         message.channel.send({embed: xp_embed});
 
-    if (message.content === "Salut"){
-         message.reply("Bien le bonjour. :)");
-         console.log("Commande Salut effectuer");
+
 
     }
 
